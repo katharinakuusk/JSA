@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway/Raleway-Light.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+html,
+body {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+button,
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: grey;
+}
+
+.btn-cart {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: darkkhaki;
+    border: none;
+    font-size: 30px;
+    position: block;
+    margin-right: 20%;
+}
+
+h3 {
+    text-align: center;
+    width: inherit;
+    font-size: 20px;
+    padding-bottom: 6px;
+    margin: 0px;
+}
+
+.img {
+    display: block;
+    height: 140px;
+    
+}
+
+.products-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    //flex-wrap: wrap;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.product-item {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    align-content: center;
+}
+
+.buy-btn__wrap {
+    display: flex;
+    align-items: row;
+}
+
+.price {
+    text-align: left;
+    font-size: 30px;
+    max-width: 100px;
+    padding-right: 0;
+    
+}
+
+.buy-btn {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: darkkhaki;
+    border: none;
+}
