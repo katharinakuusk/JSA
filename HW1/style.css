@@ -1,9 +1,4 @@
-@font-face {
-    font-family: "Raleway";
-    src: url(../fonts/Raleway/Raleway-Light.ttf) format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html,
 body {
@@ -11,6 +6,7 @@ body {
     width: 100%;
     margin: 0 auto;
     background-color: #fff;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1,
@@ -34,7 +30,12 @@ header {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-    background: grey;
+    background: #323232;
+}
+
+main {
+    min-width: 80%;
+    max-width: 90%;
 }
 
 .btn-cart {
@@ -42,7 +43,7 @@ header {
     padding-right: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: darkkhaki;
+    background-color: whitesmoke;
     border: none;
     font-size: 30px;
     position: block;
@@ -59,7 +60,9 @@ h3 {
 
 .img {
     display: block;
+    width: 250px;
     height: 140px;
+    object-fit: cover;
     
 }
 
@@ -68,7 +71,7 @@ h3 {
     flex-direction: row;
     justify-content: space-evenly;
     align-content: flex-start;
-    //flex-wrap: wrap;
+    flex-wrap: wrap;
     width: 100%;
     padding-top: 10px;
     padding-left: 5%;
@@ -76,25 +79,27 @@ h3 {
 }
 
 .product-item {
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 100%;
+    padding: 2% 2px 2px 2%;
+    width: width: calc(100% * (1/4) - 20px - 1px);
     align-content: center;
 }
 
 .buy-btn__wrap {
     display: flex;
-    align-items: row;
+    flex: 1;
+    flex-flow: row wrap;
+    width: 200px;
+    justify-content: space-between;
+    align-content: baseline;
+    padding-top: 5px;
 }
 
 .price {
-    text-align: left;
+    display: inline-block;
     font-size: 30px;
-    max-width: 100px;
-    padding-right: 0;
-    
+    height: inherit;
+    vertical-align: middle;
+    box-sizing: border-box;
 }
 
 .buy-btn {
@@ -102,6 +107,7 @@ h3 {
     padding-right: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: darkkhaki;
+    background-color: #323232;
+    color: whitesmoke;
     border: none;
 }
