@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html kand="en">
+    <head>
+        <meta charse="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="style.css">
+        <title>Order Burger</title>
+    </head>
+    <body>
+        <header>
+            <h3>Choose a Burger and add some stuff</h3>
+        </header>
+        <main>
+            <div class="order-constructor">
+                <div class="burger__wrap">
+                    <button class="btn-burger" id="large" onclick="hamburger.setSize('large')" type="button">Large</button>
+                    <button class="btn-burger" id="small" onclick="hamburger.setSize('small')" type="button">Small</button>
+                </div>
+                <div class="stuff__wrap">
+                    <button class="btn-stuff" id="cheese" onclick="hamburger.addStuff('cheese')" type="button">with Cheese</button>
+                    <button class="btn-stuff" id="salad" onclick="hamburger.addStuff('salad')" type="button">with Salad</button>
+                    <button class="btn-stuff" id="potato" onclick="hamburger.addStuff('potato')" type="button">with Potato</button>
+                 </div>
+                 <div class="topping__wrap">
+                    <button class="btn-topping" id="spices" onclick="hamburger.addStuff('spices')" type="button">Spices</button>
+                    <button class="btn-topping" id="mayo" onclick="hamburger.addStuff('mayo')" type="button">Mayo</button>
+                 </div>
+                 <div class="price__wrap">
+                     <div class="price-container">
+                         <div class="price-text">Total: </div>
+                         <div class="price-text" id="price"></div>
+                         <div class="price-text">RUB</div>
+                     </div>
+                     <div class="price-container">
+                         <div class="price-text">Energy: </div>
+                         <div class="price-text" id="energy"></div>
+                         <div class="price-text">kcal</div>
+                     </div>
+                 </div>
+            </div>
+        </main>
+        <script src="js/main.js"></script>
+        <script src="js/hamburger.js"></script>
+    </body>
+</html>
