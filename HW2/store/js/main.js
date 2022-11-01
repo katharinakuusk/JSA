@@ -1,5 +1,6 @@
-import {Page} from './basket.js';
+import {Catalogue} from './catalogue.js';
 
-const page = new Page()
+console.log("executed?")
+const page = new Catalogue()
 page.renderPage()
 alert(page.getTotal())
