@@ -1,6 +1,8 @@
 import {Catalogue} from './catalogue.js';
+import {Cart} from './cart.js';
 
-console.log("executed?")
-const page = new Catalogue()
-page.renderPage()
-alert(page.getTotal())
+const page = new Catalogue();
+const cart = new Cart();
+cart.onPressCart()
+console.log(cart)
+console.log(page);

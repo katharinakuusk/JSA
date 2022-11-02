@@ -1,27 +1,32 @@
+const API = 'https://raw.githubusercontent.com/katharinakuusk/JSA/HW3/HW2';
+
 export class Catalogue {
     constructor() {
         this.dir = this.getDir()
-        this.products = [
-            {id: 1, title: "Notebook", price: 2000, img: "notebook"},
-            {id:2, title: "Mouse", price: 20, img: "mouse"},
-            {id:3, title: "Keyboard", price: 200, img: "keyboard"},
-            {id:4, title: "Gamepad", price: 50, img: "gamepad"},
-        ]
-        console.log("am I")
-        this.getImgSrc()
-        this.items =[];
+        this.file_name = "catalogue_products.json"
+        this.products = []
+        this.getProducts(this.file_name)
+            .then(data => {
+                this.products = data;
+                this.getImgSrc();
+                this.renderPage();
+            })
+    }
+
+    getProducts(file_name){
+        return fetch(`${API}/${file_name}`)
+            .then(response => response.json())
+            .catch(error => console.log(error))
     }
     
     getDir() {
         let loc = window.location.pathname;
         let dir = loc.substring(0, loc.lastIndexOf('/'));
         return dir
-        
     }
     
     getImgSrc() {
-        let prod = this.products.map(item => item.img = `img/${item.img}`);
-        console.log(this.prod);
+        this.products.forEach(item => item.img = `${this.dir}/img/${item.img}`);
     }
     
     renderPage() {
@@ -29,20 +34,6 @@ export class Catalogue {
         let productsList = this.items.map(item => item.render());
         document.querySelector('.products-container').innerHTML=productsList.join("");
     }
-    
-    getTotal() {
-        
-        let total = 0;
-        let items = this.products;
-        
-        for (let i=0; i<items.length; i++) {
-            let productTotal = items[i].price;
-            total += productTotal;
-        }
-        
-        return total
-        
-    }   
 }
 
 class Item {
@@ -57,56 +48,10 @@ class Item {
     return `<div class="product-item">
                 <h3>${this.title}</h3>
                 <img class="img" src="${this.img}">
-                <div "buy-btn__wrap">
+                <div class="buy-btn__wrap">
                     <p class="price">${this.price}</p>
                     <button class="buy-btn">Buy</button>
                 </div>
             </div>\n`
     };
-}
-
-class Basket {
-    constructor() {
-        this.items = [];
-        this.total = 0;
-    }
-    
-    // GoodsList
-    getTotal() {
-        
-        total = 0
-        items = this.items
-        
-        for (let i=0; i<items.length; i++) {
-            productTotal = items[i].price * items[i].number
-            total += productTotal
-        }
-        
-        return total
-    }
-    
-    emptyBasket() {
-        
-    }
-    
-    addItem() {
-        
-    }
-    
-    removeItem() {
-        
-    }
-    
-    addDiscountCode() {
-        
-    }
-    
-    createOrder() {
-        
-    }
-    
-    render() {
-        
-    }
-    
 }

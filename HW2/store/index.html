@@ -2,17 +2,20 @@
 <html kand="en">
     <head>
         <meta charse="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <title>Internet Store</title>
     </head>
     <body>
         <header>
-            <button class="btn-cart" type="button">Catalogue</button>
+            <a class="btn-cart" id="btn-cart"  type="button">Cart</a>
         </header>
         <main>
+            <div class="cart" id="cart"></div>
             <div class="products-container"></div>
         </main>
         <script type="module" src="js/catalogue.js"></script>
+        <script type="module" src="js/cart.js"></script>
         <script type="module" src="js/main.js"></script>
     </body>
 </html>
