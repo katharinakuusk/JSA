@@ -1,0 +1,15 @@
+form {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% * (1/6) - 30px);
+}
+
+input {
+    min-width: 300px;
+    margin-left: 50px;
+    margin-top: 8px;
+}
+
+.textField {
+    min-height: 100px;
+}
