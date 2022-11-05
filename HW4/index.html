@@ -50,13 +50,29 @@
             If I knew this is the last time I see you, I’d tell you I love you, and would not just assume foolishly you know it already.'
         </p>
         <form method="post">
-            Name: <input type="text" pattern="[A-Za-zА-Яа-я]+">
-            Phone: <input type="text" patter="/^\+7\(\d{3}\)\d{3}-\d{4}$/">
-            E-mail: <input type="text" patter="/^([A-Za-z0-9\._\-]+)@([A-Za-z\d\._\-]+).([A-Za-z]+)/">
-            Your suggestion: <input type="text" class="textField">
-            <input type="submit" value="submit">
+            <div class="input_container">
+                Name:
+                <input id="name" type="text" title="Name" oninput="validator.validateElem(this)">
+                <div class="error_message"></div>
+            </div>
+            <div class="input_container">
+                Phone:
+                <input id="tel" type="tel" title="+7(XXX)XXX-XXXX" oninput="validator.validateElem(this)">
+                <div class="error_message"></div>
+            </div>
+            <div class="input_container">
+                E-mail:
+                <input id="email" type="e-mail" title="example@box.com" oninput="validator.validateElem(this)">
+                <div class="error_message"></div>
+            </div>
+            <div class="input_container">
+                Your suggestion:
+                <input type="text" class="textField">
+                <div class="error_message"></div>
+            </div>
+            <input class="btn-submit" type="submit" value="submit">
         </form>
     </main>
-    <script src="main.js"></script>
+    <script type="module" src="js/main.js"></script>
     </body>
 </html>

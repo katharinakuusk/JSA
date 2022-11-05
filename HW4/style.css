@@ -2,12 +2,18 @@ form {
     display: flex;
     flex-wrap: wrap;
     width: calc(100% * (1/6) - 30px);
+    margin-left: 50px;
+    padding-top: 20px;
+}
+
+.error_message {
+    min-height: 30px;
+    color: darkred;
+    font-size: 12px;
 }
 
 input {
     min-width: 300px;
-    margin-left: 50px;
-    margin-top: 8px;
 }
 
 .textField {
