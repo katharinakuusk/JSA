@@ -1,5 +1,8 @@
-import {Page} from './basket.js';
+import {Catalogue, Cart} from './catalogue.js';
+//import {Cart, CartItem} from './cart.js';
 
-const page = new Page()
-page.renderPage()
-alert(page.getTotal())
+const cart = new Cart();
+const page = new Catalogue(cart);
+cart.onPressCart();
+console.log(cart);
+console.log(page);
